@@ -9,11 +9,6 @@ npm run build
 # Navigate into the distribution directory.
 cd dist
 
-# If the repository is a user/organization page
-# git init
-# git remote add origin https://github.com/<USERNAME>/<USERNAME>.github.io
-# git checkout -b main
-
 # If the repository is a project page
 git init
 git remote add origin git@github.com:salemango/character-trait-builder.git
