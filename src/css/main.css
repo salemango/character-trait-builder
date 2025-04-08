@@ -1,0 +1,526 @@
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: black;
+    margin-top: 30%;
+    margin-bottom: 90%;
+}
+
+body[color-scheme="dark"] {
+    background-color: #000812;
+    color: white;
+}
+
+/* Page Header styles */
+.page-header {
+    z-index: 3;
+}
+
+.page-header  header {
+    width: 100%;
+    background-color: #d8d8d8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid black;
+}
+
+body[color-scheme="dark"] .page-header {
+    background-color: #000812;
+}
+
+body[color-scheme="dark"] .page-header header {
+    background-color: #00122A;
+}
+
+.page-header  h1 {
+    font-size: 22pt;
+    margin-bottom: 1%;
+}
+
+.page-header  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1%;
+    display: flex;
+    justify-content: center;
+}
+
+.page-header  ul li img {
+    height: 30px;
+    padding: 0 5%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.page-header  img {
+    height: 17px;
+    padding: 0;
+    margin: 0 auto;
+    vertical-align: baseline;
+}
+
+.page-header  p {
+    color: #474747;
+    font-size: 12pt;
+    padding: 0 2%;
+    margin-top: -5%;
+}
+
+body[color-scheme="dark"] .page-header p {
+    color: #B9CADF;
+}
+
+.page-header  p span {
+    font-weight: bold;
+}
+
+/* Trait List styles */
+h2 {
+    line-height: 1em;
+    margin-bottom: 2%;
+  }
+  
+
+ul {
+list-style-type: none;
+padding: 0;
+margin: 1%;
+display: inline-flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.trait img {
+padding: 0;
+margin: 0 auto;
+height: 24px;
+vertical-align: middle;
+}
+
+.saved .trait img {
+    transform: rotate(45deg);
+}
+
+.saved ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li.trait {
+    margin: 1%;
+    padding: 2% 3%;
+    font-weight: bold;
+    text-transform: capitalize;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .25s ease all;
+    z-index: 0;
+}
+
+li.trait:hover {
+    transform: scale(105%);
+    z-index: 0;
+    color: black;
+    transition: .25s ease all;
+}
+
+li.positive-trait {
+    color: #12501E;
+    background-color: #67DB7D;
+}
+
+body[color-scheme="dark"] li.positive-trait {
+    color:#4CD37E;
+    background-color: #054A2E;
+}
+
+li.neutral-trait {
+background-color: #6CCEFF;
+color: #152D69;
+}
+
+body[color-scheme="dark"] li.neutral-trait {
+    background-color: #152D69;
+    color:#6CCEFF;
+}
+
+li.negative-trait {
+background-color: #FF7474;
+color: #5B0B0B;
+}
+
+body[color-scheme="dark"] li.negative-trait {
+    background-color: #730404;
+    color: #EB612F;
+}
+
+/* Personality Sheet Styles */
+img.sheet-handle {
+    background-color: black;
+    border-radius: 100%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: .5s ease all;
+    height: 40px;
+    width: 40px;
+    justify-self: center;
+    align-self: center;
+    z-index: 6;
+}
+
+img.icon-expand {
+    transform: rotate(180deg) translateY(50%);
+    transition: .5s ease all;
+}
+
+.personality-sheet {
+    background-color: white;
+    border-top: 2px solid black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: .5s ease all;
+    height: 350px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.scrollable {
+    overflow-y: scroll;
+}
+
+body[color-scheme="dark"] .personality-sheet {
+    background-color: #00122A;
+    border-top: 2px solid black;
+}
+
+.scrollable::-webkit-scrollbar {
+    background-color: white;
+    width: 10px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+    background-color: #d8d8d8;
+}
+
+body[color-scheme="dark"] .personality-sheet .scrollable::-webkit-scrollbar {
+    width: 10px;
+    background-color: #00122A;
+    border-left: 1px solid #000812;
+}
+
+body[color-scheme="dark"] .personality-sheet .scrollable::-webkit-scrollbar-thumb {
+    background-color: #000812;
+}
+
+.personality-sheet.collapsed-sheet {
+    height: 45px;
+    transition: .5s ease all;
+}
+
+.personality-sheet.collapsed-sheet > h2 {
+    margin-top: -5%;
+}
+
+.personality-sheet h3 {
+    font-size: 13pt;
+    margin: .5%;
+    padding: .5%;
+    line-height: 1em;
+    border-bottom: 1px solid black;
+}
+
+
+body[color-scheme="dark"] .personality-sheet h3 {
+    color: #B9CADF;
+}
+
+div.saved {
+    padding: 2%;
+    text-align: center;
+    margin: 1%;
+}
+
+.personality-sheet ul {
+    list-style-type: none;
+    padding: none;
+}
+
+.control-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: end;
+    margin-top: auto;
+}
+
+.personality-sheet button {
+    background-color: #d8d8d8;
+    border: none;
+    padding: 3% 7%;
+    font-size: 15pt;
+    font-weight: bold;
+    margin: 2%;
+    cursor: pointer;
+    width: 60%;
+    align-self: center;
+    transition: .25s ease all;
+}
+
+.personality-sheet button:hover {
+    transform: scale(105%);
+    transition: .25s ease all;
+}
+
+body[color-scheme="dark"] .personality-sheet button {
+    background-color: #000812;
+    color: white;
+}
+
+@media screen and (min-width: 600px) { /* Tablets */
+    
+    body {
+        margin-top: 16%;
+        margin-bottom: 70%;
+    }
+    
+    /* Page Header Styles */
+    .page-header  h1 {
+        font-size: 25pt;
+    }
+
+    .page-header  img {
+        height: 22px;
+    }
+
+    .page-header  p {
+        font-size: 14pt;
+    }
+
+    .page-header  ul {
+        position: absolute;
+        top: 0;
+        right: 0;            
+    }
+
+    .page-header  ul li img {
+        height: 60px;
+    }
+
+    /* Trait List Styles */
+    h2 {
+        font-size: 20pt;
+    }
+    
+    img {
+    height: 30px;
+    }
+    
+    li.trait {
+    font-size: 16pt;
+    padding: 1.5%;
+    }
+
+    /* Personality Sheet Styles */
+    img.sheet-handle {
+        height: 60px;
+        width: 60px;
+    }
+
+    .personality-sheet {
+        height: 480px;
+    }
+
+    .personality-sheet.personality-sheet.collapsed-sheet {
+        height: 60px;
+    }
+
+    .personality-sheet.collapsed-sheet > h2 {
+        margin-top: -4%;
+    }
+    
+    .personality-sheet > h2 {
+        font-size: 20pt;
+        margin-bottom: 1%;
+    }
+
+    .personality-sheet h3 {
+        font-size: 16pt;
+    }
+
+    .personality-sheet button {
+        font-size: 20pt;
+    }
+}
+
+@media screen and (min-width: 990px) { /* Small Desktop */
+    body {
+        margin-bottom: 2%;
+    }
+
+    /* Page Header Styles */
+    .page-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+    }
+    
+    .page-header  header {
+        position: absolute;
+        top: 0;
+    }
+    
+    .page-header   h1 {
+        line-height: 1em;
+    }
+
+    .page-header  p {
+        font-size: 15pt;
+        margin-top: 8%;
+    }
+
+    .page-header  ul li img {
+        height: 50px;
+    }
+
+    /* Trait List Styles */
+
+    /* Personality Sheet Styles */
+}
+
+@media screen and (min-width: 1000px) and (min-height: 900px) { /* iPad Pro */
+    body {
+      margin-top: 5%;
+    }
+
+    .personality-sheet {
+        height: 580px;
+    }
+
+    .personality-sheet h2 {
+        margin: 2%;
+        margin-top: -3%;
+    }
+  }
+
+@media screen and (min-width: 1290px) { /* Desktop Mid */
+    body {
+        margin-top: 0;
+        margin-bottom: 2%;
+    }
+
+    /* Trait List Styles */
+    .trait-list {
+      width: 50%;
+      float: left;
+    }    
+    h2 {
+      font-size: 25pt;
+      margin-top: 3%;
+      margin-bottom: 1%;
+    }
+  
+    .trait-list h2:first-of-type {
+      margin-top: 30%;
+    }
+  
+    li.trait {
+      padding: .5% 1%;
+      margin: .5%;
+    }
+
+    /* Personality Sheet Styles*/
+    .personality-sheet {
+        background-color: white;
+        border: 2px solid black;
+        height: 800px;
+        clear: both;
+        position: fixed;
+        right: 20px;
+        left: auto;
+        bottom: 100px;
+        top: auto;
+        height: 700px;
+        width: 48%;
+    }
+
+    body[color-scheme="dark"] .personality-sheet {
+        border: none;
+        box-shadow: 0px 0px 10px 10px rgb(0, 0, 0, .5);
+    }
+
+    .personality-sheet h2 {
+        margin: 2%;
+    }
+
+    img.sheet-handle {
+        display: none;
+    }
+    
+  }
+
+  @media screen and (min-width: 1400px) and (min-height: 890px) { /* Macbook Pro */
+    body {
+        margin-top: 0;
+    }
+
+    li.trait {
+        margin: .75%;
+        padding: 1% 2%;
+    }
+    
+    .personality-sheet {
+        height: 700px;
+        bottom: 20px;
+    }
+
+    button {
+        padding: 3% 5%;
+    }
+}
+
+@media screen and (min-width: 1700px) { /* Large Desktops */
+    body {
+        margin-top: 0;
+      }
+ 
+    /* Page Header Styles */
+    .page-header  p {
+        margin-top: 5%;
+    }
+
+    .page-header  ul li img {
+        height: 50px;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Trait List Styles */
+    .trait-list h2:first-of-type {
+        margin-top: 18%;
+    }
+
+    /* Personality Sheet Styles */
+    .personality-sheet {
+        height: 750px;
+    }
+
+    .personality-sheet h2 {
+        margin: 3%;
+        margin-bottom: 5%;
+    }
+}
+
+@media screen and (min-width: 1900px) and (min-height: 1000px) { /* XL Desktops */
+    .personality-sheet {
+        height: 900px;
+    }
+}

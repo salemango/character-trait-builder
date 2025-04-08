@@ -5,11 +5,19 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "json": "json-server  --watch data/db.json" 
   },
   "dependencies": {
+    "@vueuse/core": "^13.0.0",
+    "axios": "^1.8.4",
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "draggable-resizable-vue3": "^1.0.94-beta",
+    "json-server": "^1.0.0-beta.3",
+    "pinia": "^3.0.1",
+    "vue": "^3.2.13",
+    "vue-draggable-resizable": "^3.0.0",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
