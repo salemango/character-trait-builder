@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "json": "json-server  --watch data/db.json" 
+    "json": "json-server  --watch data/db.json",
+    "deploy": "sh deploy.sh"
   },
   "dependencies": {
     "@vueuse/core": "^13.0.0",
