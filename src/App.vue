@@ -97,7 +97,6 @@ export default {
         collapsed: false,
         desktop: false,
         windowWidth: null,
-        // Containers for traits 
         // Traits for Trait list
         positiveTraits: [],
         neutralTraits: [],
