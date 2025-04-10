@@ -121,19 +121,19 @@ export default {
     },
     // Get traits from json database
     getPositiveTraits: function() {
-      axios.get('http://localhost:3000/positive-traits')
+      axios.get('https://raw.githubusercontent.com/salemango/salemango.github.io/refs/heads/main/data/positive-trait-data.json')
         .then((response) => this.positiveTraits = response.data)
         .catch(error => console.log(error.message));
       return;
     },
     getNeutralTraits: function() {
-      axios.get('http://localhost:3000/neutral-traits')
+      axios.get('https://raw.githubusercontent.com/salemango/salemango.github.io/refs/heads/main/data/positive-trait-data.json')
         .then((response) => this.neutralTraits = response.data)
         .catch(error => console.log(error.message));
       return;      
     },
     getNegativeTraits: function() {
-      axios.get('http://localhost:3000/negative-traits')
+      axios.get('https://raw.githubusercontent.com/salemango/salemango.github.io/refs/heads/main/data/positive-trait-data.json')
         .then((response) => this.negativeTraits = response.data)
         .catch(error => console.log(error.message));
       return;
