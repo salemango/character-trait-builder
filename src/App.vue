@@ -127,13 +127,13 @@ export default {
       return;
     },
     getNeutralTraits: function() {
-      axios.get('https://raw.githubusercontent.com/salemango/salemango.github.io/refs/heads/main/data/positive-trait-data.json')
+      axios.get('https://raw.githubusercontent.com/salemango/salemango.github.io/refs/heads/main/data/neutral-trait-data.json')
         .then((response) => this.neutralTraits = response.data)
         .catch(error => console.log(error.message));
       return;      
     },
     getNegativeTraits: function() {
-      axios.get('https://raw.githubusercontent.com/salemango/salemango.github.io/refs/heads/main/data/positive-trait-data.json')
+      axios.get('https://raw.githubusercontent.com/salemango/salemango.github.io/refs/heads/main/data/negative-trait-data.json')
         .then((response) => this.negativeTraits = response.data)
         .catch(error => console.log(error.message));
       return;
